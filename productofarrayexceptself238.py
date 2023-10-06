@@ -22,7 +22,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-    def productExceptSelf(self, nums): #ppio argh
+    def productExceptSelf_shortercode(self, nums): #ppio argh
         l=len(nums)
         prefix=1
         postfix=1
