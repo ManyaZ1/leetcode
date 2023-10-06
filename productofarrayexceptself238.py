@@ -22,7 +22,21 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
+    def productExceptSelf(self, nums): #ppio argh
+        l=len(nums)
+        prefix=1
+        postfix=1
+        result=[1]*l
         
+        #postfix[-1]=1
+        for i in range(1,l):
+            result[i]=result[i-1]*nums[i-1]#prefix
+        for i in range(l):
+            result[-1-i]*=postfix
+            postfix*=nums[-1-i]
+            
+        return result
+     
     
     
     
